@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+    <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="AdminDesigns">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font CSS (Via CDN) -->
+    <!--  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'> -->
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="http://assets.netease.com/??widgets/daterange/daterangepicker.css,widgets/magnific/magnific-popup.css" />
+    <link rel="stylesheet" type="text/css" href="http://assets.netease.com/??widgets/fancytree/skin-win8/ui.fancytree.min.css,libs/jquery_ui/jquery-ui.min.css,fonts/iconsweets/iconsweets.css,widgets/select2/css/core.css,skin/default_skin/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="http://assets.netease.com/??admin-tools/admin-forms/css/admin-forms.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://assets.netease.com//a/dc/portal/1.0.0/font/iconfont.css">
+    <style type="text/css">
+    .navbar[class*='bg-'] .caret.caret-tp {
+        border-top-color: white;
+    }
+    
+    .move-size {
+        cursor: pointer;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .move_size {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .ui-resizable-helper {
+        border: 1px dotted gray;
+    }
+    
+    .panel-body {
+        background-color: white;
+    }
+    
+    .panel {
+        background-color: transparent;
+    }
+    
+    .ui-sortable-helper.panel {
+        box-shadow: none;
+    }
+    
+    em {
+        font-style: normal;
+    }
+    
+    .text-primary {
+        color: #e56045 !important;
+    }
+    
+    #content_wrapper {
+        background-color: #f2f2f2;
+    }
+    
+    .panel-controls {
+        float: right;
+        display: block;
+        cursor: pointer;
+        border-left: 1px solid #e5e5e5;
+        padding-left: 10px;
+    }
+    
+    .panel.panel-border > .panel-heading {
+        background-color: white;
+        border-color: #e5e5e5;
+        border-top: 1px solid transparent;
+    }
+    
+    .panel-heading {
+        position: relative;
+        height: 40px;
+        line-height: 36px;
+        background: white;
+        color: #666666;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0 8px;
+        border: 1px solid #e5e5e5;
+        border-top-right-radius: 1px;
+        border-top-left-radius: 1px;
+    }
+    
+    #topbar {
+        z-index: 2;
+        position: relative;
+        width: 100%;
+        min-height: 51px;
+        padding: 10px 21px;
+        background: #f2f2f2;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .form-control:focus {
+        border-color: #e56045;
+        outline: 0;
+    }
+    
+    .panel-control-loader:after {
+        color: #e56045 !important;
+    }
+    
+    .br-b-dashed {
+        border-bottom: 1px dotted #eee !important;
+    }
+    
+    .multiselect {
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 0px;
+        background: white;
+    }
+    
+    .bg-dark {
+        background: #1b1b1b !important;
+    }
+    
+    .bg-dark.dark {
+        background: #1b1b1b !important;
+    }
+    
+    .panel-primary.panel-border {
+        border-color: #e56045;
+    }
+    
+    #sidebar_left.sidebar-light .sidebar-menu > li.active > a > span:nth-child(1) {
+        color: #e56045;
+    }
+    
+    .sidebar-menu > li > ul > li:hover > a:after,
+    .sidebar-menu > li > ul > li:focus > a:after {
+        background: #e56045;
+    }
+    
+    .admin-form .option-primary input:checked + .checkbox,
+    .admin-form .option-primary input:focus + .checkbox,
+    .admin-form .option-primary input:checked + .radio,
+    .admin-form .option-primary input:focus + .radio {
+        border-color: #e56045;
+    }
+    
+    .admin-form .option-primary input:checked + .checkbox:before,
+    .admin-form .option-primary input:focus + .checkbox:before {
+        border-color: #e56045;
+    }
+    
+    .admin-form .btn-primary {
+        background-color: #e56045;
+    }
+    
+    .btn-primary.disabled,
+    .btn-primary[disabled],
+    fieldset[disabled] .btn-primary,
+    .btn-primary.disabled:hover,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary:hover,
+    .btn-primary.disabled:focus,
+    .btn-primary[disabled]:focus,
+    fieldset[disabled] .btn-primary:focus,
+    .btn-primary.disabled:active,
+    .btn-primary[disabled]:active,
+    fieldset[disabled] .btn-primary:active,
+    .btn-primary.disabled.active,
+    .btn-primary[disabled].active,
+    fieldset[disabled] .btn-primary.active {
+        background-color: #e56045;
+        border-color: #cc553d;
+    }
+    
+    .admin-form .btn-primary:hover,
+    .admin-form .btn-primary:focus {
+        background-color: #cc553d;
+        border-color: #cc553d;
+    }
+    
+    .text-primary {
+        color: #e56045 !important;
+    }
+    
+    a {
+        color: #e56045;
+        text-decoration: none;
+    }
+    
+    a:hover,
+    a:focus {
+        color: #e56045;
+        text-decoration: underline;
+    }
+    
+    #main:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #f2f2f2;
+    }
+    
+    span.fancytree-node.fancytree-active:hover,
+    span.fancytree-node.fancytree-selected:hover {
+        background-color: white;
+        border-color: #f2f2f2;
+    }
+    
+    span.fancytree-node.fancytree-active,
+    span.fancytree-node.fancytree-selected {
+        background-color: white;
+        border-color: #f2f2f2;
+    }
+    
+    span.fancytree-node:hover {
+        background-color: white;
+        border-color: #f2f2f2;
+    }
+    
+    span.fancytree-node.fancytree-active,
+    span.fancytree-node.fancytree-selected {
+        background-color: white;
+        border-color: #f2f2f2;
+    }
+    
+    .fancytree-container.fancytree-treefocus span.fancytree-node.fancytree-active,
+    .fancytree-container.fancytree-treefocus span.fancytree-node.fancytree-selected {
+        background-color: white;
+        border-color: #e56045;
+    }
+    
+    .daterangepicker td.active,
+    .daterangepicker td.active:hover {
+        background: #e56045;
+        border-color: #f2f2f2;
+    }
+    
+    .btn-success {
+        color: white;
+        background-color: #e56045;
+    }
+    
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-success:active,
+    .btn-success.active,
+    .open > .dropdown-toggle.btn-success {
+        color: #ffffff;
+        background-color: #cc553d;
+        border-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    .btn-primary.light {
+        background-color: #e56045;
+    }
+    
+    .btn-primary.light:hover,
+    .btn-primary.light:focus,
+    .btn-primary.light:active,
+    .btn-primary.light.active,
+    .open > .dropdown-toggle.btn-primary.light {
+        background-color: #cc553d;
+    }
+    </style>
+</head>
+
+<body class="sb-top sb-top-lg" style="overflow:initial;">
+    <!-- Start: Main -->
+    <div id="main">
+        <!-- Start: Header -->
+        <header class="navbar navbar-fixed-top navbar-shadow bg-dark">
+            <div class="navbar-branding">
+                <a class="navbar-brand" href="dashboard.html">
+                    <b class="icon portal icon-cnneteaseweibo fs35 text-primary"></b> PORTAL
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="menu-divider hidden-xs">
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li class="dropdown menu-merge">
+                    <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="http://assets.netease.com/img/avatars/5.jpg" alt="avatar" class="mw30 br64 mr15"> jbqihong
+                        <span class="caret caret-tp hidden-xs"></span>
+                    </a>
+                    <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-envelope"></span> <em>bjqihong@netease.com</em>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-gear"></span> <em>超级管理员</em> </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="animated animated-short fadeInUp">
+                                <span class="fa fa-power-off"></span> 退出 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="toggle_sidemenu_t">
+                    <span class="fa fa-caret-up"></span>
+                </li>
+            </ul>
+        </header>
+        <!-- End: Header -->
+        <!-- Start: Sidebar -->
+        <aside id="sidebar_left" class="sidebar-light light affix">
+            <!-- Start: Sidebar Left Content -->
+            <div class="sidebar-left-content nano-content">
+                <!-- Start: Sidebar Menu -->
+                <ul class="nav sidebar-menu">
+                    <li>
+                        <a class="accordion-toggle" href="#">
+                            <span class="fa fa-table"></span>
+                            <span class="sidebar-title">报表</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a href="layout_sidebar-left-static.html">
+                            VP日报 
+                      </a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar-left-fixed.html">
+                      私人报表 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a class="accordion-toggle menu-open" href="#">
+                            <span class="fa fa-columns"></span>
+                            <span class="sidebar-title">BI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle" href="#">
+                            <span class="icon-applications"></span>
+                            <span class="sidebar-title">应用</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="nav sub-nav">
+                            <li>
+                                <a href="layout_sidebar-left-static.html">
+                      新闻客户端 </a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar-left-fixed.html">
+                      跟帖 </a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar-left-widgets.html">
+                      网易微博 </a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar-left-minified.html">
+                      网易哒哒 </a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar-left-light.html">
+                       bobo交友 </a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar-right-static.html">
+                      网易花田  </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle" href="#">
+                            <span class="fa fa-globe"></span>
+                            <span class="sidebar-title">后台</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End: Sidebar Menu -->
+            </div>
+            <!-- End: Sidebar Left Content -->
+        </aside>
+        <!-- Start: Content-Wrapper -->
+        <section id="content_wrapper">
+            <!-- Start: Topbar -->
+            <header id="topbar" class="affix">
+                <div class="topbar-left">
+                    <div class="col-md-7 pn">
+                        <!-- <span class="j_form_title pull-left ml15 mt5">开机画面</span> -->
+                        <ol class="breadcrumb">
+                            <li class="crumb-active">
+                                <a href="dashboard.html">VP日报</a>
+                            </li>
+                            <li class="crumb-trail">开机画面</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- <div class="topbar-right hidden-xs hidden-sm">
+                    <a href="#" class="btn btn-default btn-sm light fw600 ml10">
+                        <span class="fa fa-plus pr5"></span> Button Link </a>
+                    <a href="#" class="btn btn-default btn-sm light fw600 ml10">
+                        <span class="fa fa-check pr5"></span> Button Link </a>
+                </div> -->
+                <form class="form-horizontal topbar-right col-md-4" role="form">
+                    <div class="form-group mbn">
+                        <label class="col-md-3 control-label pt5" for="daterangepicker1">日期选择</label>
+                        <div class="col-md-6 pn pr10">
+                            <input type="text" class="form-control input-sm pull-right" name="daterange" id="daterangepicker1">
+                        </div>
+                        <a href="#" class="btn btn-default btn-sm light fw600 col-md-3 btn-primary" id="j_createDataBlock">
+                            <span class="fa fa-check pr5"></span> 创建数据块 </a>
+                    </div>
+                </form>
+            </header>
+            <!-- End: Topbar -->
+            <!-- Begin: Content -->
+            <section id="content" class="animated fadeIn">
+                <div class="panel panel-primary panel-border top">
+                    <div class="panel-heading">
+                        <span class="panel-title"> VP日报</span>
+                        <span class="panel-controls">
+                            <a href="#" class="panel-control-loader"></a>
+                            <a href="#" class="panel-control-collapse text-primary"></a>
+                        </span>
+                    </div>
+                    <div class="panel-body admin-form">
+                        <div class="row mb15">
+                            <div class="col-xs-8">
+                                <input class="form-control" name="search" placeholder="过滤...">
+                            </div>
+                            <div class="col-xs-4">
+                                <button class="btn btn-primary mr10 ph20" id="btnResetSearch"> 清除
+                                    <i class="fa fa-remove pl10"></i>
+                                </button>
+                                <span id="matches"></span>
+                            </div>
+                        </div>
+                        <p>
+                            <div class="option-group field">
+                                <label for="hideMode" class="option option-primary mr15">
+                                    <input type="checkbox" id="hideMode" name="hideMode" value="checked" checked="">
+                                    <span class="checkbox"></span>隐藏没过滤掉的节点</label>
+                            </div>
+                        </p>
+                        <!-- <label for="hideMode" class="mr15">
+                                <input type="checkbox" class="mr5 va-t" id="hideMode"> Hide unmatched nodes
+                            </label>
+                            <label for="leavesOnly" class="mr15">
+                                <input type="checkbox" class="mr5 va-t" id="leavesOnly"> Leaves only
+                            </label> 
+                            <label for="regex">
+                                <input type="checkbox" class="mr5 va-t" id="regex"> Regular expression
+                            </label>-->
+                        <hr class="short alt mv15">
+                        <p id="sampleButtons">
+                        </p>
+                        <!-- Add a <table> element where the tree should appear: -->
+                        <div id="tree8">
+                        </div>
+                    </div>
+                </div>
+                <div class="row handle">
+                    <div class="panel col-md-8 ">
+                        <div class="panel-heading">
+                            <span class="panel-icon pn"></span>
+                            <span class="panel-title"> K V 数据</span>
+                            <span class="panel-controls">
+                            <a href="#" class="panel-control-loader"></a>
+                            <a href="#" class="panel-control-remove"></a>
+                            <a href="#" class="panel-control-title"></a>
+                            <a href="#" class="panel-control-color"></a>
+                            <a href="#" class="panel-control-collapse"></a>
+                            <a href="#" class="panel-control-fullscreen"></a>
+                        </span>
+                        </div>
+                        <div class="panel-body ">
+                            <div class="row">
+                                <!-- <div class="col-md-12 pb15 br-b br-b-dashed"> -->
+                                <div class="col-md-12 pb15">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm active btn-default bg-light light">
+                                            <i class="icon portal icon-table fs12"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-default bg-light light">
+                                            <i class="icon portal icon-chart10 fs12"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-default bg-light light">
+                                            <i class="icon portal icon-line fs12"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-default bg-light light">
+                                            <i class="icon portal icon-pie fs12"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-default  bg-light light">
+                                            <i class="icon portal icon-funnel fs12"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="alt short mtn mb15" />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="multiselect2" class="col-md-4 control-label pt5">Keys</label>
+                                            <div class="col-md-8">
+                                                <select id="multiselect2" multiple="multiple">
+                                                    <option value="cheese">Cheese</option>
+                                                    <option value="tomatoes">Tomatoes</option>
+                                                    <option value="mozarella">Mozzarella</option>
+                                                    <option value="mushrooms">Mushrooms</option>
+                                                    <option value="pepperoni">Pepperoni</option>
+                                                    <option value="onions">Onions</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="multiselect3" class="col-md-4 control-label pt5">Groups</label>
+                                            <div class="col-md-8">
+                                                <select id="multiselect3" multiple="multiple">
+                                                    <option value="cheese">Cheese</option>
+                                                    <option value="tomatoes">Tomatoes</option>
+                                                    <option value="mozarella">Mozzarella</option>
+                                                    <option value="mushrooms">Mushrooms</option>
+                                                    <option value="pepperoni">Pepperoni</option>
+                                                    <option value="onions">Onions</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="multiselect4" class="col-md-4 control-label pt5">Values</label>
+                                            <div class="col-md-8">
+                                                <select id="multiselect4" multiple="multiple">
+                                                    <option value="cheese">Cheese</option>
+                                                    <option value="tomatoes">Tomatoes</option>
+                                                    <option value="mozarella">Mozzarella</option>
+                                                    <option value="mushrooms">Mushrooms</option>
+                                                    <option value="pepperoni">Pepperoni</option>
+                                                    <option value="onions">Onions</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <hr class="alt short mtn mb15" />
+                            <div class="resize">
+                                <div class="row of-x-h of-y-a" style="width:100%; height:100%">
+                                    <div class="col-md-12">
+                                        <table class="table table-striped table-hover" id="datatable" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cedric Kelly</td>
+                                                    <td>Senior Javascript Developer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>22</td>
+                                                    <td>2012/03/29</td>
+                                                    <td>$433,060</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brielle Williamson</td>
+                                                    <td>Integration Specialist</td>
+                                                    <td>New York</td>
+                                                    <td>61</td>
+                                                    <td>2012/12/02</td>
+                                                    <td>$372,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sonya Frost</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>23</td>
+                                                    <td>2008/12/13</td>
+                                                    <td>$103,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quinn Flynn</td>
+                                                    <td>Support Lead</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>22</td>
+                                                    <td>2013/03/03</td>
+                                                    <td>$342,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Haley Kennedy</td>
+                                                    <td>Senior Marketing Designer</td>
+                                                    <td>London</td>
+                                                    <td>43</td>
+                                                    <td>2012/12/18</td>
+                                                    <td>$313,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tatyana Fitzpatrick</td>
+                                                    <td>Regional Director</td>
+                                                    <td>London</td>
+                                                    <td>19</td>
+                                                    <td>2010/03/17</td>
+                                                    <td>$385,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Silva</td>
+                                                    <td>Marketing Designer</td>
+                                                    <td>London</td>
+                                                    <td>66</td>
+                                                    <td>2012/11/27</td>
+                                                    <td>$198,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paul Byrd</td>
+                                                    <td>Chief Financial Officer (CFO)</td>
+                                                    <td>New York</td>
+                                                    <td>64</td>
+                                                    <td>2010/06/09</td>
+                                                    <td>$725,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gloria Little</td>
+                                                    <td>Systems Administrator</td>
+                                                    <td>New York</td>
+                                                    <td>59</td>
+                                                    <td>2009/04/10</td>
+                                                    <td>$237,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bradley Greer</td>
+                                                    <td>Software Engineer</td>
+                                                    <td>London</td>
+                                                    <td>41</td>
+                                                    <td>2012/10/13</td>
+                                                    <td>$132,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dai Rios</td>
+                                                    <td>Personnel Lead</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>35</td>
+                                                    <td>2012/09/26</td>
+                                                    <td>$217,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jenette Caldwell</td>
+                                                    <td>Development Lead</td>
+                                                    <td>New York</td>
+                                                    <td>30</td>
+                                                    <td>2011/09/03</td>
+                                                    <td>$345,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 panel">
+                        <div class="panel-heading">
+                            <span class="panel-icon pn"></span>
+                            <span class="panel-title">KV数据一</span>
+                            <span class="panel-controls">
+                            <a href="#" class="panel-control-loader"></a>
+                            <a href="#" class="panel-control-remove"></a>
+                            <a href="#" class="panel-control-title"></a>
+                            <a href="#" class="panel-control-color"></a>
+                            <a href="#" class="panel-control-collapse"></a>
+                            <a href="#" class="panel-control-fullscreen"></a>
+                        </span>
+                        </div>
+                        <div class="panel-body of-a">
+                            <p class="">
+                                内容区
+                            </p>
+                            <div class="resize" class="width:100%; height:100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 panel">
+                        <div class="panel-heading">
+                            <span class="panel-icon pn"></span>
+                            <span class="panel-title"> KV数据二</span>
+                            <span class="panel-controls">
+                            <a href="#" class="panel-control-loader"></a>
+                            <a href="#" class="panel-control-remove"></a>
+                            <a href="#" class="panel-control-title"></a>
+                            <a href="#" class="panel-control-color"></a>
+                            <a href="#" class="panel-control-collapse"></a>
+                            <a href="#" class="panel-control-fullscreen"></a>
+                        </span>
+                        </div>
+                        <div class="panel-body of-a">
+                            <p class="">
+                                内容区
+                            </p>
+                            <div class="resize" class="width:100%; height:100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 panel">
+                        <div class="panel-heading">
+                            <span class="panel-icon pn"></span>
+                            <span class="panel-title"> KV数据三</span>
+                            <span class="panel-controls">
+                            <a href="#" class="panel-control-loader"></a>
+                            <a href="#" class="panel-control-remove"></a>
+                            <a href="#" class="panel-control-title"></a>
+                            <a href="#" class="panel-control-color"></a>
+                            <a href="#" class="panel-control-collapse"></a>
+                            <a href="#" class="panel-control-fullscreen"></a>
+                        </span>
+                        </div>
+                        <div class="panel-body of-a">
+                            <p class="">
+                                内容区
+                            </p>
+                            <span class="move_size col-md-12"></span>
+                            <div class="resize" class="width:100%; height:100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End: Content -->
+        </section>
+    </div>
+    <!-- Admin Form Popup -->
+    <div id="modal-form" class=" popup-basic admin-form mfp-with-anim mfp-hide">
+        <div class="panel">
+            <div class="panel-heading">
+                <span class="panel-title">
+                <i class="fa fa-rocket"></i>数据块创建</span>
+            </div>
+            <!-- end .panel-heading section -->
+            <form method="post" action="/" id="comment">
+                <div class="panel-body p25">
+                    <div class="section row">
+                        <div class="col-md-6">
+                            <label for="firstname" class="field prepend-icon">
+                                <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
+                                <label for="firstname" class="field-icon">
+                                    <i class="fa fa-user"></i>
+                                </label>
+                            </label>
+                        </div>
+                        <!-- end section -->
+                        <div class="col-md-6">
+                            <label for="lastname" class="field prepend-icon">
+                                <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
+                                <label for="lastname" class="field-icon">
+                                    <i class="fa fa-user"></i>
+                                </label>
+                            </label>
+                        </div>
+                        <!-- end section -->
+                    </div>
+                    <!-- end section row section -->
+                    <div class="section">
+                        <label for="comment" class="field prepend-icon">
+                            <textarea class="gui-textarea" id="comment" name="comment" placeholder="Your comment"></textarea>
+                            <label for="comment" class="field-icon">
+                                <i class="fa fa-comments"></i>
+                            </label>
+                            <span class="input-footer">
+                      <strong>Hey You:</strong> We expect a great comment...</span>
+                        </label>
+                    </div>
+                    <!-- end section -->
+                </div>
+                <!-- end .form-body section -->
+                <div class="panel-footer">
+                    <button type="submit" class="button btn-primary">Post Comment</button>
+                </div>
+                <!-- end .form-footer section -->
+            </form>
+        </div>
+        <!-- end: .panel -->
+    </div>
+    <!-- end: .admin-form -->
+    <!-- End: Main -->
+    <!-- BEGIN: PAGE SCRIPTS -->
+    <!-- jQuery -->
+    <!--http://assets.netease.com/libs/jquery-1.11.1.min.js-->
+    <script src="http://assets.netease.com/libs/??jquery-1.11.1.min.js,jquery_ui/jquery-ui.min.js"></script>
+    <!-- Theme Javascript -->
+    <script src="http://assets.netease.com/js/??utility/utility.js,demo/demo.js,main.js"></script>
+    <script src="http://assets.netease.com/widgets/fancytree/??jquery.fancytree-all.min.js,extensions/jquery.fancytree.childcounter.js,extensions/jquery.fancytree.columnview.js,extensions/jquery.fancytree.dnd.js,extensions/jquery.fancytree.edit.js,extensions/jquery.fancytree.filter.js"></script>
+    <script src="http://assets.netease.com/widgets/??moment/moment.min.js,daterange/daterangepicker.js,select2/select2.min.js,pnotify/pnotify.js,magnific/jquery.magnific-popup.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+
+        "use strict";
+
+        // Init Theme Core    
+        Core.init();
+
+        var width = $('.handle').width();
+        console.log(width, 'width');
+        console.log(parseInt(width / 12, 10), 'width/12');
+
+        var width_length = width / 12;
+
+
+        $(window).on('resize', function(e) {
+            width = $('.handle').width();
+            width_length = width / 12;
+        });
+
+
+        $(".resize").resizable({
+            //animate: true,
+            helper: "ui-resizable-helper",
+            grid: [width_length, 20],
+            minWidth: 150,
+            stop: function(event, ui) {
+
+                var width = ui.element.parent('div').width();
+
+
+                var col_md = 0;
+
+                if (Math.ceil(ui.size.width / width_length) >= 12) {
+                    col_md = "col-md-" + 12;
+                } else if (Math.ceil(ui.size.width / width_length) <= 0) {
+                    col_md = "col-md-" + 0;
+                } else {
+                    col_md = "col-md-" + Math.ceil(ui.size.width / width_length);
+                }
+
+                var panel = ui.element.parents('.panel');
+
+
+                var GRID = 12;
+
+                for (var i = 0; i < GRID; i++) {
+                    if (panel.hasClass('col-md-' + i)) {
+                        panel.removeClass('col-md-' + i);
+                    }
+                }
+
+
+                panel.addClass(col_md);
+
+                ui.element.css('width', 'auto');
+
+            }
+        });
+
+        $(".handle").sortable({
+            connectWith: ".handle",
+            handle: ".panel-heading"
+        });
+        $(".handle").disableSelection();
+
+        // $("#tree").fancytree({
+        //     icons: false, // Display node icons.
+        //     clickFolderMode: 2, // 1:activate, 2:expand, 3:activate and expand, 4:activate (dblclick expands)
+        // });
+
+        $("#tree8").fancytree({
+
+            icons: false, // Display node icons.
+            clickFolderMode: 2,
+            extensions: ["filter"],
+            quicksearch: true,
+            source: {
+                url: "http://assets.netease.com/widgets/fancytree/ajax-tree-local.json"
+            },
+            filter: {
+                mode: "hide",
+                autoApply: true
+            },
+            activate: function(event, data) {
+                //        alert("activate " + data.node);
+            },
+            lazyLoad: function(event, data) {
+                data.result = {
+                    url: "http://assets.netease.com/widgets/fancytree/ajax-sub2.json"
+                }
+            }
+        });
+        var tree = $("#tree8").fancytree("getTree");
+        /*
+         * Event handlers for our little demo interface
+         */
+        $("input[name=search]").keyup(function(e) {
+            var n,
+                leavesOnly = $("#leavesOnly").is(":checked"),
+                match = $(this).val();
+
+            if (e && e.which === $.ui.keyCode.ESCAPE || $.trim(match) === "") {
+                $("button#btnResetSearch").click();
+                return;
+            }
+            if ($("#regex").is(":checked")) {
+                // Pass function to perform match
+                n = tree.filterNodes(function(node) {
+                    return new RegExp(match, "i").test(node.title);
+                }, leavesOnly);
+            } else {
+                // Pass a string to perform case insensitive matching
+                n = tree.filterNodes(match, leavesOnly);
+            }
+            $("button#btnResetSearch").attr("disabled", false);
+            $("span#matches").text("(" + n + " 个报表)");
+        });
+
+        $("button#btnResetSearch").click(function(e) {
+            $("input[name=search]").val("");
+            $("span#matches").text("");
+            tree.clearFilter();
+        }).attr("disabled", true);
+
+        tree.options.filter.mode = $("input#hideMode").is(":checked") ? "hide" : "dimm";
+        tree.clearFilter();
+
+        $("input#hideMode").change(function(e) {
+            tree.options.filter.mode = $(this).is(":checked") ? "hide" : "dimm";
+            tree.clearFilter();
+            $("input[name=search]").keyup();
+        });
+        $("input#leavesOnly").change(function(e) {
+            // tree.options.filter.leavesOnly = $(this).is(":checked");
+            tree.clearFilter();
+            $("input[name=search]").keyup();
+        });
+        $("input#regex").change(function(e) {
+            tree.clearFilter();
+            $("input[name=search]").keyup();
+        });
+
+
+        //解决bug拖拽
+        $('.handle').find('.panel-heading').on('mousedown', function() {
+            // $('body').height();
+            // $('body').css('min-height', $('body').height());
+            $('body').css('overflow', 'initial');
+        });
+
+        $('.handle').find('.panel-heading').on('mouseup', function() {
+            $('body').css('overflow', 'initial');
+        });
+
+
+        //切换加载
+        var toggleEvent = function(self) {
+            self.addClass('panel-loader-active');
+            setTimeout(function() {
+                self.removeClass('panel-loader-active');
+            }, 650);
+        }
+
+        //最小化与最大化
+        $('.panel-control-collapse').off('click').on('click', function(e) {
+            var self = $(this);
+
+            var panel = self.parents('.panel');
+            toggleEvent(panel);
+            if (!self.parents('.panel').hasClass('panel-collapsed')) {
+                self.parents('.panel').addClass('panel-collapsed');
+                self.parents('.panel').find('.panel-body').hide();
+                return;
+            } else {
+                self.parents('.panel').removeClass('panel-collapsed');
+                self.parents('.panel').find('.panel-body').show();
+            }
+
+        });
+
+        //日期选择
+        // Init DateRange plugin
+        $('#daterangepicker1').daterangepicker({
+            showWeekNumbers: true, //是否显示第几周 
+            format: 'YYYY-MM-DD',
+            locale: {
+                applyLabel: '确定',
+                cancelLabel: '取消',
+                fromLabel: '起始时间',
+                toLabel: '结束时间',
+                customRangeLabel: '自定义',
+                daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                monthNames: ['一月', '二月', '三月', '四月', '五月', '六月',
+                    '七月', '八月', '九月', '十月', '十一月', '十二月'
+                ],
+                firstDay: 1
+            }
+        });
+
+
+        //x轴 y轴 group
+        $('#multiselect2').multiselect();
+        $('#multiselect3').multiselect();
+        $('#multiselect4').multiselect();
+
+
+        // function findWidth() {
+        //   if (noteStack == "stack_bar_top") {
+        //     return "100%";
+        //   }
+        //   if (noteStack == "stack_bar_bottom") {
+        //     return "70%";
+        //   } else {
+        //     return "290px";
+        //   }
+        // }
+
+        // console.log(new PNotify, 'new PNotify');
+
+
+        new PNotify({
+            title: 'Bootstrap Themed',
+            text: 'Look at my beautiful styling! ^_^',
+            opacity: "1",
+            type: "success",
+            addclass: "stack_top_right",
+            delay: 1400
+        });
+
+        new PNotify({
+            title: 'Bootstrap Themed',
+            text: 'Look at my beautiful styling! ^_^',
+            opacity: "1",
+            type: "danger",
+            addclass: "stack_top_right",
+            delay: 1400
+        });
+        // new PNotify({
+        //   title: 'Bootstrap Themed',
+        //   text: 'Look at my beautiful styling! ^_^',
+        //   shadow: undefined,
+        //   opacity: "1",
+        //   addclass: "stack_top_right",
+        //   type: "success",
+        //   stack: "stack_top_right",
+        //   width: "100%",
+        //   delay: 1400
+        // });
+
+
+
+
+        $('#j_createDataBlock').off('click').on('click', function(e) {
+            $('#animation-switcher').find('button').removeClass('active-animation');
+            $(this).addClass('active-animation item-checked');
+
+
+
+            // Inline Admin-Form example 
+            $.magnificPopup.open({
+                removalDelay: 500, //delay removal by X to allow out-animation,
+                items: {
+                    src: '#modal-form'
+                },
+                // overflowY: 'hidden', // 
+                callbacks: {
+                    beforeOpen: function(e) {
+                        var Animation = "mfp-flipInY";
+                        this.st.mainClass = Animation;
+                    }
+                },
+                midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+            });
+
+        });
+
+
+
+    });
+    </script>
+    <!-- END: PAGE SCRIPTS -->
+</body>
+
+</html>

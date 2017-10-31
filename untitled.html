@@ -1,0 +1,36 @@
+                <div className="panel panel-primary panel-border top">
+                    <div className="panel-heading">
+                        <span className="panel-title"> VP日报</span>
+                        <span className="panel-controls">
+                            <a href="#" className="panel-control-loader"></a>
+                            <a href="#" className="panel-control-collapse text-primary"></a>
+                        </span>
+                    </div>
+                    <div className="panel-body admin-form">
+                        <div className="row mb15">
+                            <div className="col-xs-8">
+                                <input className="form-control" name="search" placeholder="过滤..." />
+                            </div>
+                            <div className="col-xs-4">
+                                <button className="btn btn-primary mr10 ph20" id="btnResetSearch"> 清除
+                                    <i className="fa fa-remove pl10"></i>
+                                </button>
+                                <span id="matches"></span>
+                            </div>
+                        </div>
+                        <p>
+                            <div className="option-group field">
+                                <label htmlFor="hideMode" className="option option-primary mr15">
+                                    <input type="checkbox" id="hideMode" name="hideMode" value="checked" checked="" />
+                                    <span className="checkbox"></span>隐藏没过滤掉的节点</label>
+                            </div>
+                        </p>
+                        <hr className="short alt mv15" />
+                        <p id="sampleButtons">
+                        </p>
+                        <div id="tree8">
+                        </div>
+                    </div>
+                </div>
+
+                
